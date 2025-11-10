@@ -1,0 +1,47 @@
+[
+  {
+    "project_id": "Fursa-Pal",
+    "project_name": "FursaPal - AI-Powered Employment Platform",
+    "short_description": "Full-stack employment platform with intelligent job matching.",
+    "long_description": "My graduation project, FursaPal, is a full-stack AI-powered employment platform. It features a responsive UI built with HTML, CSS, and JavaScript, and a robust back-end powered by PHP (MVC). Key features include intelligent job matching, content verification via the OpenAI API, and secure user authentication. ",
+    "card_image": "images/fursapal-card.jpg",
+    "spotlight_image": "images/fursapal-spotligth.webp",
+    "url": "https://github.com/waseem-jadaa"
+  },
+  {
+    "project_id": "react-ecommerce-store",
+    "project_name": "React E-Commerce Store",
+    "short_description": "Front-end for a modern, responsive e-commerce platform.",
+    "long_description": "A full-featured e-commerce store front-end built using React. It includes a dynamic hero section, product categories (like Beauty, Fragrances, Furniture), a navigation bar, and a clean, responsive layout for a modern user experience. Deployed on Netlify.",
+    "card_image": "images/card-react.png",
+    "spotlight_image": "images/spotligth-react.png",
+    "url": "https://github.com/waseem-jadaa"
+  },
+  {
+    "project_id": "dms-api",
+    "project_name": "Delivery System (DMS) - Back-End",
+    "short_description": "Core back-end and RESTful APIs using Java & Spring Boot.",
+    "long_description": "A hands-on development role on a real-world Delivery System. Responsible for building core back-end functionalities and RESTful APIs with Java and Spring Boot, contributing directly to the project's development lifecycle.",
+    "card_image": "images/card-Ds.png",
+    "spotlight_image": "images/spotligth-DS.webp",
+    "url": "https://github.com/waseem-jadaa"
+  },
+  {
+    "project_id": "linux-shell-c",
+    "project_name": "Linux Shell Implementation (C)",
+    "short_description": "A command-line interpreter (shell) built in C.",
+    "long_description": "A C-based implementation of a Linux shell (command-line interpreter). This project demonstrates low-level system programming and process management, including parsing user input, handling built-in commands, and executing external system commands.",
+    "card_image": "images/card-linux.png",
+    "spotlight_image": "images/spotligth-linux.gif",
+    "url": "https://github.com/khaledsalahat/linux"
+  },
+  {
+    "project_id": "udacity-portfolio",
+    "project_name": "Waseem Web Development Portfolio",
+    "short_description": "My first portfolio project from the Udacity Nanodegree.",
+    "long_description": "A professional portfolio website built as part of the Udacity Nanodegree. It specializes in building full-stack applications using React.js and Java (Spring Boot), and showcases my passion for building intelligent and efficient solutions.",
+    "card_image": "images/personal_site_card.webp",
+    "spotlight_image": "images/personal_site_spotlight.webp",
+    "url": "https://github.com/waseem-jadaa/YOUR-UDACITY-REPO-NAME"
+  }
+]

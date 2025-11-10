@@ -16,6 +16,12 @@ body {
     color:var(--onLightBG);
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 button {
     border-radius:10px;
     padding:10px;
@@ -83,8 +89,8 @@ nav {
 }
 
 #aboutMeContainer {
-    margin: 0 0 50px 0;
-    padding: 20px 0 0 0;
+    margin: 20px auto 40px auto;
+    padding: 10px 0 0 0;
 
     & h2,
     & p {
@@ -97,12 +103,13 @@ nav {
     flex-direction:column;
     justify-content:space-between;
     align-items: center;
-    gap:20px;
+    gap:12px;
 
     & p {
-        width:100%
+        width:100%;
+        margin: 0;
+        line-height: 1.5;
     }
-
 
 }
 
@@ -136,12 +143,12 @@ nav {
 }
 
 #projectsContainer {
-    margin: 50px 0 50px 0;
-    padding: 20px 0 0 0;
-
+    margin: 30px auto 40px auto;
+    padding: 10px 0 0 0;
 
     & h2 {
-        padding: 0 20px 0 20px;
+        padding: 0 10px 10px 10px;
+        margin: 0 0 10px 0;
     }
 }
 
@@ -149,8 +156,8 @@ nav {
     display: flex;
     width: 100%;
     overflow-x: auto;
-    gap: 20px;
-    padding: 0 40px 0 20px;
+    gap: 12px;
+    padding: 0 20px 0 10px;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
 
@@ -175,24 +182,33 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:20px 0 0 0 ;
+    margin:10px 0 0 0 ;
 }
 
 #projectSpotlight {
     margin: 10px 0;
-    width: 90%;
-    height: 600px;
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
     border-radius: 10px;
+    /* make spotlight image cover and keep content readable */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.02);
 }
 
 
 #spotlightTitles {
     width: 100%;
-    background: var(--titleBackground);
-    padding: 20px 20px 20px 20px;
+    /* translucent panel to increase text contrast on images */
+    background: linear-gradient(180deg, rgba(228,216,204,0.45) 0%, var(--titleBackground) 60%);
+    padding: 16px 16px;
 
     & h3 {
-        margin: 0;
+        margin: 0 0 8px 0;
 
     }
 }
@@ -208,6 +224,7 @@ nav {
         width:100%;
         height:auto;
         object-fit: cover;
+        border-radius: 8px;
     }
 }
 
@@ -273,21 +290,25 @@ nav {
 .projectCard {
     position: relative;
     flex: 0 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border: 2px solid var(--onLightBG);
     border-radius: 10px;
     overflow: hidden;
     transition: all .3s;
     cursor: pointer;
     filter: grayscale();
+    /* ensure background images cover the card */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     & h4 {
         width: 100%;
-        background: rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .6);
         margin: 0;
-        padding: 10px;
-        min-height: 35%;
+        padding: 8px;
+        min-height: 34%;
     }
 
     & p {
@@ -295,6 +316,15 @@ nav {
         padding: 0 10px;
         font-weight: bold;
     }
+}
+
+/* improve title contrast on hover and when needed */
+.projectCard h4 {
+    background: rgba(255,255,255,0.6);
+}
+
+.projectCard:hover h4 {
+    background: rgba(0,0,0,0.5);
 }
 
 .projectCard:hover {
@@ -366,10 +396,12 @@ nav {
 @media (width >= 768px){
     #aboutMe {
         flex-direction:row;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
 
         & p {
-            width:60%;
+            width:70%;
         }
     }
 
@@ -378,8 +410,15 @@ nav {
     }
 
     .headshotContainer {
-        width:30%;
-        max-width:600px;
+        width:25%;
+        max-width:260px;
+        flex: 0 0 auto;
+    }
+
+    .headshotContainer img {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -397,4 +436,31 @@ nav {
     }
 
     
+}
+
+/* RTL support: when HTML has dir="rtl" the layout will flip and text will right-align */
+[dir="rtl"] {
+    direction: rtl;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] p,
+[dir="rtl"] label {
+    text-align: right;
+}
+
+[dir="rtl"] nav {
+    justify-content: flex-start;
+    padding: 0 0 0 20px;
+    margin: 0 0 0 20px;
+}
+
+[dir="rtl"] #projectList {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] #aboutMe {
+    text-align: right;
 }
